@@ -1,0 +1,4 @@
+<?php 
+   $path = $_SERVER['DOCUMENT_ROOT'];
+   $path .= "/subdir1/yourdocument.txt";
+?>

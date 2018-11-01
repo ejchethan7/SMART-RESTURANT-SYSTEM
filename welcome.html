@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="js/bootstrap.min.js"></script>
+      <script src="jquery.min.js"></script>
+	  <script>
+	  $(document).ready(function(){
+$('#waterQ').blur(waterC);    
+$('#gCornPizzaQty').blur(gCornPizzaCalculate);
+	$('#plpq').blur(plpCalculate);
+  	$('#vsq').blur(vsCalculate);
+    $('#vbq').blur(vbCalculate);
+    $('#bcq').blur(bcCalculate);
+    $('#ccq').blur(ccCalculate);
+    $('#dbcq').blur(dbcCalculate);
+    $('#jq').blur(jCalculate);
+});
+function waterC(e)
+{
+	$('#waterT').val($('#waterQ').val() * $('#waterC').val());	
+	var cost = ($('#waterT').val());
+	var total = ($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+}
+function gCornPizzaCalculate(e)
+{
+    $('#gCornPizzaTotal').val($('#gCornPizzaQty').val() * $('#gCornPizzaCost').val());	
+var cost = parseInt($('#gCornPizzaTotal').val());
+var total = parseInt($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+
+}
+function plpCalculate(e)
+{
+    $('#plpt').val($('#plpq').val() * $('#plpc').val());
+	var cost = parseInt($('#plpt').val());
+	var total = parseInt($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+
+}        
+function vsCalculate(e)
+{
+    $('#vst').val($('#vsq').val() * $('#vsc').val());
+	var cost = parseInt($('#vst').val());
+	var total =parseInt($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+	
+}
+function vbCalculate(e)
+{
+    $('#vbt').val($('#vbq').val() * $('#vbc').val());
+	var cost = parseInt($('#vbt').val());
+	var total = parseInt($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+	
+}
+function bcCalculate(e)
+{
+    $('#bct').val($('#bcq').val() * $('#bcc').val());
+	var cost = parseInt($('#bct').val());
+	var total =parseInt($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+	
+}
+function ccCalculate(e)
+{
+    $('#cct').val($('#ccq').val() * $('#ccc').val());
+	var cost = parseInt($('#cct').val());
+	var total =parseInt ($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+
+}
+function dbcCalculate(e)
+{
+    $('#dbct').val($('#dbcq').val() * $('#dbcc').val());
+	var cost = parseInt($('#dbct').val());
+	var total = parseInt($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+}
+function jCalculate(e)
+{
+    $('#jt').val($('#jq').val() * $('#jc').val());
+	var cost = parseInt($('#jt').val());
+	var total =parseInt($('#t').val());
+	total = parseInt(total+cost);
+	parseInt($('#t').val(total));
+}
+        
+	  </script>
+   </head>
+   <body id="LoginForm" >
+      <div class="container">
+         <h1 class="form-heading">MENU ORDER</h1>
+         <div class="login-form">
+            <div class="main-div">
+               <div class="panel">
+                  <h2>Welcome User</h2>
+               </div>
+               <table class="table table-bordered">
+                  <tbody>
+                     <tr>
+                        <td><strong>Sl. No.</strong></td>
+                        <td><strong>Items</strong></td>
+                        <td><strong>Quantity</strong></td>
+                        <td><strong>Rate</strong></td>
+                        <td><strong>Total Cost</strong></td>
+                     </tr>
+			<tr>
+                        <td>COMPLEMENTARY</td>
+                        <td>WATER</td>
+                        <td><input type="number" id="waterQ" name="waterQ" min="0" /></td>
+                        <td><input type="number" id="waterC" name="waterC" value="0" readonly /></td>
+                        <td><input type="number" id="waterT" name="waterT" readonly /></td>
+                     </tr>                    
+
+
+			 <tr>
+                        <td>1.</td>
+                        <td>Golden Corn Pizza</td>
+                        <td><input type="number" id="gCornPizzaQty" name="gCornPizzaQty" min="0" /></td>
+                        <td><input type="number" id="gCornPizzaCost" name="gCornPizzaCost" value="250" readonly /></td>
+                        <td><input type="number" id="gCornPizzaTotal" name="gCornPizzaTotal" readonly /></td>
+                     </tr>
+                     <tr>
+                        <td>2.</td>
+                        <td>Paneer Lazeez Pizza</td>
+                        <td><input type="number" id="plpq" name="plpq" min="0" /></td>
+                        <td><input type="number" id="plpc" name="plpc" value="300" readonly /></td>
+                        <td><input type="number" id="plpt" name="plpt" readonly /></td>
+                     </tr>
+                     <tr>
+                        <td>3.</td>
+                        <td>Vegetable Sandwich</td>
+                        <td><input type="number" id="vsq" name="vsq" min="0"/></td>
+                        <td><input type="number" id="vsc" name="vsc" value="150" readonly/></td>
+                        <td><input type="number" id="vst" name="vst" readonly/></td>
+                     </tr>
+                     <tr>
+                        <td>4.</td>
+                        <td>Veg. Burger</td>
+                        <td><input type="number" id="vbq" name="vbq" min="0"/></td>
+                        <td><input type="number" id="vbc" name="vbc" value="100" readonly /></td>
+                        <td><input type="number" id="vbt" name="vbt" readonly /></td>
+                     </tr>
+                     <tr>
+                        <td>5.</td>
+                        <td>Black Coffee</td>
+                        <td><input type="number" id="bcq" name="bcq" min="0" /></td>
+                        <td><input type="number" id="bcc" name="bcc" value="120" readonly /></td>
+                        <td><input type="number" id="bct" name="bct" readonly /></td>
+                     </tr>
+                     <tr>
+                        <td>6.</td>
+                        <td>Cadbury Coffee</td>
+                        <td><input type="number" id="ccq" name="ccq" min="0"/></td>
+                        <td><input type="number" id="ccc" name="ccc" value="135" readonly /></td>
+                        <td><input type="number" id="cct" name="cct" readonly /></td>
+                     </tr>
+                     <tr>
+                        <td>7.</td>
+                        <td>Death By Chocolate</td>
+                        <td><input type="number" id="dbcq" name="dbcq" min="0"/></td>
+                        <td><input type="number" id="dbcc" name="dbcc" value="185" readonly /></td>
+                        <td><input type="number" id="dbct" name="dbct" readonly /></td>
+                     </tr>
+                     <tr>
+                        <td>8.</td>
+                        <td>Jamoon(2pieces)</td>
+                        <td><input type="number" id="jq" name="jq" min="0" /></td>
+                        <td><input type="number" id="jc" name="jc" value="75" readonly /></td>
+                        <td><input type="number" id="jt" name="jt" readonly/></td>
+                     </tr>
+					 <tr>
+					 <td colspan="4"><p class="pull-right">Total:</p></td>
+					 <td><input type="number" id="t" name="t" readonly></td>
+					 </tr>
+					 <tr>
+			<form id="Checkout Orders" action="ss.php">			
+	
+</tr>
+<tr>				 <td><button type="submit" class="btn btn-success">Checkout Orders</button></td>
+</form>
+         
+
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      </div>
+   </body>
+</html>
